@@ -1,0 +1,43 @@
+---
+layout: default
+---
+
+<article class="post">
+    <header class="post-header">
+        <h1 class="post-title">{{ page.title }}</h1>
+        <time class="post-meta" datetime="{{ page.date | date_to_xmlschema }}">
+            {{ page.date | date: "%d de %B de %Y" }}
+        </time>
+    </header>
+
+    <div class="post-content">
+        {{ content }}
+    </div>
+</article>
+
+<div class="post-navigation">
+    {% if page.previous %}
+        <a href="{{ page.previous.url | relative_url }}" aria-label="Post mais recente" title="Post mais recente">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+        </a>
+    {% else %}
+        <a href="{{ "/" | relative_url }}" aria-label="Voltar ao início" title="Voltar ao início">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+        </a>
+    {% endif %}
+
+    <a href="https://www.threads.net/gutobaroni" target="_blank" rel="noopener noreferrer" aria-label="Threads" title="Threads" class="threads-link">
+        <img src="/assets/imgs/threads-logo-black.svg" alt="Threads" class="threads-logo threads-logo--light" />
+        <img src="/assets/imgs/threads-logo-white.svg" alt="Threads" class="threads-logo threads-logo--dark" />
+    </a>
+    
+    {% if page.next %}
+        <a href="{{ page.next.url | relative_url }}" aria-label="Post antigo" title="Post anterior">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+        </a>
+    {% else %}
+        <a href="{{ "/" | relative_url }}" aria-label="Voltar ao início" title="Voltar ao início">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+        </a>
+    {% endif %}
+</div>

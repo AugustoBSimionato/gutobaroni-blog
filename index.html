@@ -1,0 +1,15 @@
+---
+layout: default
+---
+
+<ul class="post-list">
+    {% for post in site.posts %}
+    <li class="post-item">
+        <a href="{{ post.url | relative_url }}">
+            <span class="post-meta">{{ post.date | date: "%d de %B de %Y" }}</span>
+            <h2 class="post-title">{{ post.title }}</h2>
+            <p class="post-excerpt">{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
+        </a>
+    </li>
+    {% endfor %}
+</ul>
