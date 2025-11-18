@@ -27,8 +27,12 @@ layout: default
     {% endif %}
 
     <a href="https://www.threads.net/gutobaroni" target="_blank" rel="noopener noreferrer" aria-label="Threads" title="Threads" class="threads-link">
-        <img src="/assets/imgs/threads-logo-black.svg" alt="Threads" class="threads-logo threads-logo--light" />
-        <img src="/assets/imgs/threads-logo-white.svg" alt="Threads" class="threads-logo threads-logo--dark" />
+        <!-- <img src="/assets/imgs/threads-logo-black.svg" alt="Threads" class="threads-logo threads-logo--light" />
+        <img src="/assets/imgs/threads-logo-white.svg" alt="Threads" class="threads-logo threads-logo--dark" /> -->
+        <img src="{{ " /assets/imgs/threads-logo-black.svg" | relative_url }}" alt="Threads"
+            class="threads-logo threads-logo--light" />
+        <img src="{{ " /assets/imgs/threads-logo-white.svg" | relative_url }}" alt="Threads"
+            class="threads-logo threads-logo--dark" />
     </a>
     
     {% if page.next %}

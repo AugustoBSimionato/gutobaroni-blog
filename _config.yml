@@ -1,7 +1,9 @@
 title: "gutobaroni | Blog"
 description: "Um blog pessoal focado em design, desenvolvimento iOS e sobre projetos como o Loop - Podcast Player."
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+# baseurl: ""
+# url: ""
+baseurl: "/gutobaroni-blog"
+url: "https://augustobsimionato.github.io"
 
 # Build settings
 markdown: kramdown
